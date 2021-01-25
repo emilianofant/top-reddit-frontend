@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "json-server": "^0.16.3",
     "milligram": "^1.4.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -35,6 +36,7 @@
   "scripts": {
     "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
+    "mock-server": "json-server --watch mock-server/post.json",
     "test": "react-scripts test"
   },
   "eslintConfig": {

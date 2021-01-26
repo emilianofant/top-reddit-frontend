@@ -42,12 +42,28 @@ class PostService {
    */
   async getFavTopPosts(): Promise<IPost[]> {
     const res = await this.api
-      .get<IPost[]>('/posts')
-      .then((posts) => posts.parsedBody || [])
+      .get<IPost[]>('/post')
+      .then((posts) => posts.parsedBody?.map((p) => ({ ...p, IsFavorited: true })) || [])
       .catch((err) => {
         throw new Error(err);
       });
 
+    return res;
+  }
+
+  async getPostById(id: string): Promise<IPost | null> {
+    const res = await this.api.get<IPost>(`/post/${id}`).then((res) => res.parsedBody);
+
+    return res;
+  }
+
+  async setFavorite(post: IPost): Promise<IPost> {
+    const res = await this.api.post<IPost>('/post', post).then((r) => r.parsedBody);
+    return res;
+  }
+
+  async deleteFavorite(id: string): Promise<any> {
+    const res = await this.api.delete<IPost>(`/post/${id}`).then((r) => r.parsedBody);
     return res;
   }
 }

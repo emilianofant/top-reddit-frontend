@@ -3,14 +3,15 @@ interface ITest {
 }
 
 interface IPost {
-  ID: string;
+  ID?: string;
   Title: string;
   Author: string;
   EntryDate: string;
   PostUrl: string;
   Thumbnail: string;
   NumberOfComments: number;
-  Status: bool;
+  Status: boolean;
+  IsFavorited?: boolean;
 }
 
 interface HttpResponse<T> extends Response {

@@ -8,13 +8,6 @@ function App(): JSX.Element {
     <AppProvider>
       <div className="App">
         <Router>
-          <div>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-            </ul>
-          </div>
           <Switch>
             <Route exact path="/">
               <Main />

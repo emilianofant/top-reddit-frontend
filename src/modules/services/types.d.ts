@@ -7,6 +7,7 @@ interface IPost {
   Title: string;
   Author: string;
   EntryDate: string;
+  PostUrl: string;
   Thumbnail: string;
   NumberOfComments: number;
   Status: bool;

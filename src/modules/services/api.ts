@@ -9,7 +9,7 @@ class Api {
   _serverBaseUrl: string;
 
   constructor() {
-    // @todo: move to .env
+    // @todo: move to .env and .env.development
     this._serverBaseUrl = 'http://localhost:3000';
   }
   /**
@@ -21,7 +21,7 @@ class Api {
    * @returns Promise
    */
   async get<T>(path: string, args: RequestInit = { method: 'get' }): Promise<HttpResponse<T>> {
-    const url = `${this._serverBaseUrl}/${path}`;
+    const url = `${this._serverBaseUrl}${path}`;
     return await this._http<T>(new Request(url, args));
   }
   /**

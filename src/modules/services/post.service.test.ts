@@ -1,4 +1,4 @@
-import PostService from './service';
+import PostService from './post.service';
 
 describe('Core class tests', () => {
   const _postService = new PostService();
@@ -14,6 +14,7 @@ describe('Core class tests', () => {
       Title: expect.any(String),
       Author: expect.any(String),
       EntryDate: expect.any(String),
+      PostUrl: expect.any(String),
       Thumbnail: expect.any(String),
       NumberOfComments: expect.any(Number),
       Status: expect.any(Boolean),
@@ -27,6 +28,7 @@ describe('Core class tests', () => {
       Title: expect.any(String),
       Author: expect.any(String),
       EntryDate: expect.any(String),
+      PostUrl: expect.any(String),
       Thumbnail: expect.any(String),
       NumberOfComments: expect.any(Number),
       Status: expect.any(Boolean),

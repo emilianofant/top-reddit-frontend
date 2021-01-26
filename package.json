@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "json-server": "^0.16.3",
     "milligram": "^1.4.1",
     "react": "^17.0.1",
@@ -35,10 +36,11 @@
   },
   "scripts": {
     "start": "PORT=3006 react-scripts start",
+    "start:dev": "npm run mock-server & (PORT=3006 react-scripts start)",
     "build": "react-scripts build",
     "mock-server": "json-server --watch mock-server/db.json",
     "test": "react-scripts test",
-    "test:development": "npm run mock-server & npm test"
+    "test:dev": "npm run mock-server & npm test"
   },
   "eslintConfig": {
     "extends": [

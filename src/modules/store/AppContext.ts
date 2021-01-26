@@ -1,5 +1,5 @@
 import React from 'react';
-import Service from '../services/service';
+import Service from '../services/post.service';
 
 interface IAppContext {
   service: Service | null;

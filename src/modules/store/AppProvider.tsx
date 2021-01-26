@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Service from '../services/service';
+import Service from '../services/post.service';
 import AppContext from './AppContext';
 
 const AppProvider: React.FC = ({ children }): JSX.Element => {

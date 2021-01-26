@@ -1,4 +1,4 @@
-import PostService from './service';
+import PostService from './post.service';
 
 describe('Core class tests', () => {
   const _postService = new PostService();

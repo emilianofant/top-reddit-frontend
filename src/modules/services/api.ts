@@ -58,11 +58,11 @@ class Api {
     //   throw new Error(response.statusText);
     // }
 
-    try {
-      response.parsedBody = await response.json();
-    } catch (err) {
-      console.log('Implement');
-    }
+    // try {
+    response.parsedBody = await response.json();
+    // } catch (err) {
+    // console.log('Error', response, err);
+    // }
 
     return response;
   }

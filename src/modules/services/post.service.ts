@@ -43,7 +43,7 @@ class PostService {
   async getFavTopPosts(): Promise<IPost[]> {
     const res = await this.api
       .get<IPost[]>('/post')
-      .then((posts) => posts.parsedBody?.map((p) => ({ ...p, IsFavorited: true })) || [])
+      .then((posts) => posts.parsedBody?.map((p) => ({ ...p, isFavorited: true })) || [])
       .catch((err) => {
         throw new Error(err);
       });
@@ -57,8 +57,13 @@ class PostService {
     return res;
   }
 
-  async setFavorite(post: IPost): Promise<IPost | undefined> {
-    const res = await this.api.post<IPost>('/post', post).then((r) => r.parsedBody);
+  async setFavorite(post: IPost): Promise<IPost | boolean> {
+    const res = await this.api
+      .post<IPost>('/post', post)
+      .then((r) => r.parsedBody || false)
+      .catch(() => {
+        return false;
+      });
     return res;
   }
 

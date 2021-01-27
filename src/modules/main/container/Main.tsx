@@ -25,11 +25,19 @@ const MainContainer: FunctionComponent = () => {
     return null;
   };
 
-  const handleOnFavButtonClick = (isFav: boolean) => {
-    if (isFav) {
-      console.log('Remove fav');
+  const handleOnFavButtonClick = (isFav: boolean, p: IPost) => {
+    if (isFav && p.id) {
+      service?.deleteFavorite(p.id).then(() => setFavPosts(favPosts.filter((x) => x.id !== p.id)));
     } else {
-      console.log('Add fav');
+      service?.setFavorite(p).then((res) => {
+        if (res) {
+          // @todo: add confirmation dialog.
+          setFavPosts([p, ...favPosts]);
+        } else {
+          // @todo: implement a nice error/warning messages handler
+          alert('Post already marked as favorite!');
+        }
+      });
     }
     return null;
   };
@@ -65,7 +73,7 @@ const MainContainer: FunctionComponent = () => {
           <PostsContainer>
             <h3>Reddit Top Posts</h3>
             {posts.map((p) => (
-              <Post post={p} key={p.ID} onFavButtonClick={handleOnFavButtonClick}></Post>
+              <Post post={p} key={p.id} onFavButtonClick={handleOnFavButtonClick}></Post>
             ))}
           </PostsContainer>
         ) : null}
@@ -73,7 +81,7 @@ const MainContainer: FunctionComponent = () => {
           <PostsContainer>
             <h3>Favorited Posts</h3>
             {favPosts.map((p) => (
-              <Post post={p} key={p.ID} onFavButtonClick={handleOnFavButtonClick}></Post>
+              <Post post={p} key={p.id} onFavButtonClick={handleOnFavButtonClick}></Post>
             ))}
           </PostsContainer>
         ) : null}

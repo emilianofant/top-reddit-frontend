@@ -51,13 +51,13 @@ class PostService {
     return res;
   }
 
-  async getPostById(id: string): Promise<IPost | null> {
+  async getPostById(id: string): Promise<IPost | undefined> {
     const res = await this.api.get<IPost>(`/post/${id}`).then((res) => res.parsedBody);
 
     return res;
   }
 
-  async setFavorite(post: IPost): Promise<IPost> {
+  async setFavorite(post: IPost): Promise<IPost | undefined> {
     const res = await this.api.post<IPost>('/post', post).then((r) => r.parsedBody);
     return res;
   }

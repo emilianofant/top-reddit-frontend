@@ -4,7 +4,7 @@
   border-radius: 5px;
   box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.3);
   display: flex;
-  height: 200px;
+  height: 400px;
   margin: 10px auto;
   width: 520px;
   overflow: hidden;
@@ -34,6 +34,17 @@
       background-color: white;
     }
 
+    &_header {
+      cursor: pointer;
+      max-height: 5.2em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      &:hover {
+       color: cornflowerblue;
+      }
+    }
+
     &_author, &_date, &_comments {
       margin: 0;
     }
@@ -51,7 +62,9 @@
 
   &_media {
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
     height: 100%;
     width: 50%;
   }

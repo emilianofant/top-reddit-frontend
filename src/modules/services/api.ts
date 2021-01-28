@@ -42,7 +42,7 @@ class Api {
     path: string,
     body: any,
     args: RequestInit = {
-      method: 'post',
+      method: 'put',
       body: JSON.stringify(body),
       headers: { 'Content-Type': 'application/json' },
     },

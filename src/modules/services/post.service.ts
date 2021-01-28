@@ -52,13 +52,23 @@ class PostService {
 
     return res;
   }
-
+  /**
+   * Function to Get a specific post by ID.
+   *
+   * @param  {string} id  The post id to find.
+   * @returns Promise
+   */
   async getPostById(id: string): Promise<IPost | undefined> {
     const res = await this.api.get<IPost>(`/post/${id}`).then((res) => res.parsedBody);
 
     return res;
   }
-
+  /**
+   * Function to save a post as Favorite.
+   *
+   * @param  {IPost} post
+   * @returns Promise
+   */
   async setFavorite(post: IPost): Promise<IPost | boolean> {
     const res = await this.api
       .post<IPost>('/post', post)
@@ -68,10 +78,18 @@ class PostService {
       });
     return res;
   }
-
+  /**
+   * Function to Remove a post from Favorite.
+   *
+   * @param  {string} id
+   * @returns Promise
+   */
   async deleteFavorite(id: string): Promise<any> {
     const res = await this.api.delete<IPost>(`/post?id=${id}`).then((r) => r.parsedBody);
     return res;
+  }
+  async markAsReaded(id: string): Promise<any> {
+    const res = await this.api.put('/post/viewed', { id: id }).then((res) => console.log(res));
   }
 }
 

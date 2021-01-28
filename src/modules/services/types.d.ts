@@ -3,14 +3,14 @@ interface ITest {
 }
 
 interface IPost {
-  id?: string;
+  id: string;
   title: string;
   author: string;
   entryDate: string;
-  postUrl: string;
+  permalink: string;
   thumbnail: string;
-  numberOfComments: number;
-  status: boolean;
+  num_comments: number;
+  viewed: boolean;
   isFavorited?: boolean;
 }
 

@@ -1,104 +1,127 @@
 {
-  "posts": [
-  {
-    "ID": "1234-1234-abcd-1",
-    "Title": "A Post title",
-    "Author": "theAuthor22",
-    "EntryDate": "4 hours ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 12,
-    "Status": true
-  },
-  {
-    "ID": "1234-1234-abcd-2",
-    "Title": "Another Post title",
-    "Author": "differentAuthor",
-    "EntryDate": "5 hours ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 2,
-    "Status": true
-  },
-  {
-    "ID": "1234-1234-abcd-3",
-    "Title": "Yet another Post title",
-    "Author": "anotherAuthor2",
-    "EntryDate": "14 hours ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 17,
-    "Status": true
-  },
-  {
-    "ID": "1234-1234-abcd-4",
-    "Title": "New Post title",
-    "Author": "theAuthor22",
-    "EntryDate": "24 hours ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 14,
-    "Status": true
-  },
-  {
-    "ID": "1234-1234-abcd-5",
-    "Title": "A Post title",
-    "Author": "theAuthor22",
-    "EntryDate": "3 days ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 10,
-    "Status": true
-  }
-],
+  "post": [
+    {
+      "ID": "1234-1234-abcd-1",
+      "Title": "A Post title",
+      "Author": "theAuthor22",
+      "EntryDate": "4 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 12,
+      "Status": true
+    },
+    {
+      "ID": "1234-1234-abcd-2",
+      "Title": "Another Post title",
+      "Author": "differentAuthor",
+      "EntryDate": "5 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 2,
+      "Status": true
+    },
+    {
+      "ID": "1234-1234-abcd-3",
+      "Title": "Yet another Post title",
+      "Author": "anotherAuthor2",
+      "EntryDate": "14 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 17,
+      "Status": true
+    },
+    {
+      "ID": "1234-1234-abcd-4",
+      "Title": "New Post title",
+      "Author": "theAuthor22",
+      "EntryDate": "24 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 14,
+      "Status": true
+    },
+    {
+      "ID": "1234-1234-abcd-5",
+      "Title": "A Post title",
+      "Author": "theAuthor22",
+      "EntryDate": "3 days ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 10,
+      "Status": true
+    },
+    {
+      "id": "1234-1234-abcd-2",
+      "Title": "Another Post title",
+      "Author": "differentAuthor",
+      "EntryDate": "5 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 2,
+      "Status": true
+    },
+    {
+      "ID": "3",
+      "Title": "Another Post title",
+      "Author": "differentAuthor",
+      "EntryDate": "5 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 2,
+      "Status": true,
+      "id": "EFyogn2"
+    },
+    {
+      "Title": "Another Post title",
+      "Author": "differentAuthor",
+      "EntryDate": "5 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 2,
+      "Status": true,
+      "id": "ONdk2FW"
+    }
+  ],
   "reddit": [
-  {
-    "ID": "1234-1234-abcd-1",
-    "Title": "A Reddit Post title",
-    "Author": "theAuthor22",
-    "EntryDate": "4 hours ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 12,
-    "Status": true
-  },
-  {
-    "ID": "1234-1234-abcd-2",
-    "Title": "Another Reddit Post title",
-    "Author": "differentAuthor",
-    "EntryDate": "5 hours ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 2,
-    "Status": true
-  },
-  {
-    "ID": "1234-1234-abcd-3",
-    "Title": "Yet another Reddit Post title",
-    "Author": "anotherAuthor2",
-    "EntryDate": "14 hours ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 17,
-    "Status": true
-  },
-  {
-    "ID": "1234-1234-abcd-5",
-    "Title": "A Post title",
-    "Author": "theAuthor22",
-    "EntryDate": "3 days ago",
-    "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
-    "Thumbnail":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
-    "NumberOfComments": 10,
-    "Status": true
-  }
-]}
+    {
+      "ID": "1234-1234-abcd-1",
+      "Title": "A Reddit Post title",
+      "Author": "theAuthor22",
+      "EntryDate": "4 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 12,
+      "Status": true
+    },
+    {
+      "ID": "1234-1234-abcd-2",
+      "Title": "Another Reddit Post title",
+      "Author": "differentAuthor",
+      "EntryDate": "5 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 2,
+      "Status": true
+    },
+    {
+      "ID": "1234-1234-abcd-3",
+      "Title": "Yet another Reddit Post title",
+      "Author": "anotherAuthor2",
+      "EntryDate": "14 hours ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 17,
+      "Status": true
+    },
+    {
+      "ID": "1234-1234-abcd-5",
+      "Title": "A Post title",
+      "Author": "theAuthor22",
+      "EntryDate": "3 days ago",
+      "PostUrl": "https://reddit.com/r/gaming/comments/l4u5up/im_a_solo_game_developer_working_on_a_dark_scifi/",
+      "Thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0e8aRJPZj0gi70afB0aIty6qIhv92ejZTg&usqp=CAU",
+      "NumberOfComments": 10,
+      "Status": true
+    }
+  ]
+}

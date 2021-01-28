@@ -3,18 +3,23 @@ interface ITest {
 }
 
 interface IPost {
-  ID: string;
-  Title: string;
-  Author: string;
-  EntryDate: string;
-  PostUrl: string;
-  Thumbnail: string;
-  NumberOfComments: number;
-  Status: bool;
+  id?: string;
+  title: string;
+  author: string;
+  entryDate: string;
+  postUrl: string;
+  thumbnail: string;
+  numberOfComments: number;
+  status: boolean;
+  isFavorited?: boolean;
 }
 
 interface HttpResponse<T> extends Response {
   parsedBody?: T;
+}
+
+interface IPostsJsonResponse {
+  posts: IPost[];
 }
 
 interface IFetchError {

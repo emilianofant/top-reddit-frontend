@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useEffect, useState } from 'react';
+import { FunctionComponent, useContext, useEffect, useState } from 'react';
 import AppContext from '../../store/AppContext';
 import Post from '../components/post';
 import PostsContainer from '../components/postsContainer';
@@ -51,6 +51,21 @@ const MainContainer: FunctionComponent = () => {
     }
   };
 
+  const handleHeaderClick = (url: string, postId: string) => {
+    service?.markAsReaded(postId).then(() => {
+      setFavPosts([
+        ...favPosts.map((p) => {
+          if (p.id === postId) {
+            p.viewed = true;
+          }
+          return p;
+        }),
+      ]);
+    });
+    window.open(url, '_blank');
+    return null;
+  };
+
   useEffect(() => {
     if (posts.length < 1) {
       fetchRedditPosts();
@@ -75,7 +90,12 @@ const MainContainer: FunctionComponent = () => {
           <PostsContainer>
             <h3>Reddit Top Posts</h3>
             {posts.map((p) => (
-              <Post post={p} key={p.id} onFavButtonClick={handleOnFavButtonClick}></Post>
+              <Post
+                post={p}
+                key={p.id}
+                onFavButtonClick={handleOnFavButtonClick}
+                onHeaderClick={handleHeaderClick}
+              ></Post>
             ))}
           </PostsContainer>
         ) : null}
@@ -84,7 +104,12 @@ const MainContainer: FunctionComponent = () => {
             <h3>Favorited Posts</h3>
             {favPosts.length > 0 ? (
               favPosts.map((p) => (
-                <Post post={p} key={p.id} onFavButtonClick={handleOnFavButtonClick}></Post>
+                <Post
+                  post={p}
+                  key={p.id}
+                  onFavButtonClick={handleOnFavButtonClick}
+                  onHeaderClick={handleHeaderClick}
+                ></Post>
               ))
             ) : (
               <h4>There are no favorite posts at the moment</h4>

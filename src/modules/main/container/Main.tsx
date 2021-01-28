@@ -22,6 +22,7 @@ const MainContainer: FunctionComponent = () => {
   };
 
   const handleDiscoverButton = () => {
+    setShowFavPosts(false);
     return null;
   };
 
@@ -29,15 +30,16 @@ const MainContainer: FunctionComponent = () => {
     if (isFav && p.id) {
       service?.deleteFavorite(p.id).then(() => setFavPosts(favPosts.filter((x) => x.id !== p.id)));
     } else {
-      service?.setFavorite(p).then((res) => {
-        if (res) {
-          // @todo: add confirmation dialog.
-          setFavPosts([p, ...favPosts]);
-        } else {
-          // @todo: implement a nice error/warning messages handler
-          alert('Post already marked as favorite!');
-        }
-      });
+      if (favPosts.some((x) => x.id === p.id)) {
+        alert('Post already marked as favorite!');
+      } else {
+        service?.setFavorite(p).then((res) => {
+          if (res) {
+            // @todo: add confirmation dialog.
+            setFavPosts([{ ...p, isFavorited: true }, ...favPosts]);
+          }
+        });
+      }
     }
     return null;
   };
@@ -69,7 +71,7 @@ const MainContainer: FunctionComponent = () => {
         </button>
       </div>
       <div style={{ display: 'flex', overflow: 'unset', height: '80%' }}>
-        {posts.length > 0 ? (
+        {posts.length > 0 && !showFavPosts ? (
           <PostsContainer>
             <h3>Reddit Top Posts</h3>
             {posts.map((p) => (
@@ -77,12 +79,16 @@ const MainContainer: FunctionComponent = () => {
             ))}
           </PostsContainer>
         ) : null}
-        {favPosts.length > 0 && showFavPosts ? (
+        {showFavPosts ? (
           <PostsContainer>
             <h3>Favorited Posts</h3>
-            {favPosts.map((p) => (
-              <Post post={p} key={p.id} onFavButtonClick={handleOnFavButtonClick}></Post>
-            ))}
+            {favPosts.length > 0 ? (
+              favPosts.map((p) => (
+                <Post post={p} key={p.id} onFavButtonClick={handleOnFavButtonClick}></Post>
+              ))
+            ) : (
+              <h4>There are no favorite posts at the moment</h4>
+            )}
           </PostsContainer>
         ) : null}
       </div>

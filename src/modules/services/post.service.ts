@@ -27,10 +27,11 @@ class PostService {
    */
   async getRedditTopPosts(): Promise<IPost[]> {
     const res = await this.api
-      .get<IPost[]>('/reddit')
-      .then((posts) => posts.parsedBody || [])
+      .get<IPostsJsonResponse>('/reddit')
+      .then((res) => res.parsedBody?.posts || [])
       .catch((err) => {
-        throw new Error(err);
+        console.log('Error: ', err);
+        return [];
       });
 
     return res;
@@ -42,10 +43,11 @@ class PostService {
    */
   async getFavTopPosts(): Promise<IPost[]> {
     const res = await this.api
-      .get<IPost[]>('/post')
-      .then((posts) => posts.parsedBody?.map((p) => ({ ...p, isFavorited: true })) || [])
+      .get<IPostsJsonResponse>('/posts')
+      .then((res) => res.parsedBody?.posts.map((p) => ({ ...p, isFavorited: true })) || [])
       .catch((err) => {
-        throw new Error(err);
+        console.log('Error: ', err);
+        return [];
       });
 
     return res;
@@ -68,7 +70,7 @@ class PostService {
   }
 
   async deleteFavorite(id: string): Promise<any> {
-    const res = await this.api.delete<IPost>(`/post/${id}`).then((r) => r.parsedBody);
+    const res = await this.api.delete<IPost>(`/post?id=${id}`).then((r) => r.parsedBody);
     return res;
   }
 }

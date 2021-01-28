@@ -10,7 +10,7 @@ class Api {
 
   constructor() {
     // @todo: move to .env and .env.development
-    this._serverBaseUrl = 'http://localhost:3000';
+    this._serverBaseUrl = 'http://localhost:8080/api/v1';
   }
   /**
    * Function to wrap all HTTP GET request and return the body parsed
@@ -26,6 +26,19 @@ class Api {
   }
 
   async post<T>(
+    path: string,
+    body: any,
+    args: RequestInit = {
+      method: 'post',
+      body: JSON.stringify(body),
+      headers: { 'Content-Type': 'application/json' },
+    },
+  ): Promise<HttpResponse<T>> {
+    const url = `${this._serverBaseUrl}${path}`;
+    return await this._http<T>(new Request(url, args));
+  }
+
+  async put<T>(
     path: string,
     body: any,
     args: RequestInit = {
@@ -54,15 +67,7 @@ class Api {
   async _http<T>(request: RequestInfo): Promise<HttpResponse<T>> {
     const response: HttpResponse<T> = await fetch(request);
 
-    // if (!response.ok) {
-    //   throw new Error(response.statusText);
-    // }
-
-    // try {
     response.parsedBody = await response.json();
-    // } catch (err) {
-    // console.log('Error', response, err);
-    // }
 
     return response;
   }

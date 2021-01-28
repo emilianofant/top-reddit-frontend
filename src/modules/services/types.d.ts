@@ -18,6 +18,10 @@ interface HttpResponse<T> extends Response {
   parsedBody?: T;
 }
 
+interface IPostsJsonResponse {
+  posts: IPost[];
+}
+
 interface IFetchError {
   message: string;
 }
